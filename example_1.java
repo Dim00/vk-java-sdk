@@ -24,7 +24,7 @@ class MyHandler extends GroupLongPollApi
         Message msg = event.getObject().getMessage();
         System.out.println (msg.getText());
         if (!msg.getText().isEmpty()) try {
-            client.messages().send(actor).randomId(rand.nextInt())
+            getClient().messages().send(getActor()).randomId(rand.nextInt())
                 .peerId(msg.getPeerId()).message(msg.getText()).execute();
         } catch (ApiException | ClientException e) {
             System.out.println ("SEND ERROR");
