@@ -5,9 +5,9 @@ import com.vk.api.sdk.client.actors.UserActor;
 
 public abstract class UserLongPollApi extends LongPollApi {
 
-    protected final UserActor actor;
+    private final UserActor actor;
 
-    protected final int groupId;
+    private final int groupId;
 
     protected UserLongPollApi(VkApiClient client, UserActor actor, int groupId, int waitTime) {
         super(client, waitTime);
