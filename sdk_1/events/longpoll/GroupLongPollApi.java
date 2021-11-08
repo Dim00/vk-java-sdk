@@ -5,7 +5,7 @@ import com.vk.api.sdk.client.actors.GroupActor;
 
 public abstract class GroupLongPollApi extends LongPollApi {
 
-    protected final GroupActor actor;
+    private final GroupActor actor;
 
     protected GroupLongPollApi(VkApiClient client, GroupActor actor, int waitTime) {
         super(client, waitTime);
