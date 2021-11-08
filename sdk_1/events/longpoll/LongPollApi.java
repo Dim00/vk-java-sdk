@@ -23,7 +23,7 @@ abstract class LongPollApi extends EventsHandler {
 
     private static final Logger LOG = LoggerFactory.getLogger(LongPollApi.class);
 
-    protected final VkApiClient client;
+    private final VkApiClient client;
 
     private final int waitTime;
 
